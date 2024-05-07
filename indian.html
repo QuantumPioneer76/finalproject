@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <!-- SlickNav Links -->
+    <link rel="stylesheet" href="styles/slicknav.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+            $('#nav_menu').slicknav({prependTo:"#mobilemenu"});
+        });
+    </script>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="shortcut icon" href="images/shortcuticon.jpg">
+    <title>Cuisines</title>
+</head>
+<body>
+    <main>
+        <section class="content">
+            <header>
+                <a href="index.html"><img class="logoimage" src="images/shortcuticon.jpg" alt="Homepage" title="Homepage"></a>
+                <nav id="mobilemenu"></nav>
+                <nav id="nav_menu">
+                    <ul>
+                        <li><a href="index.html" id="homebutton">Home</a></li>
+                        <li><a href="italian.html" id="italian">Italian</a></li>
+                        <li><a href="french.html" id="french">French</a></li>
+                        <li><a href="mexican.html" id="mexican">Mexican</a></li>
+                        <li><a href="indian.html" id="indian">Indian</a></li>
+                        <li><a href="chinese.html" id="chinese">Chinese</a></li>
+                        <li><a href="thai.html" id="thai">Thai</a></li>
+                        <li><a href="vietnamese.html" id="vietnamese">Vietnamese</a></li>
+                    </ul>
+                </nav>    
+            </header>
+            <h1>Samosa</h1>
+            <p>Pellentesque urna lorem, fermentum eu tempus ac, tristique nec lacus. Mauris in vehicula ligula, eget sollicitudin urna. Nam nec libero vel dolor aliquet posuere nec et velit. Cras fermentum venenatis ligula eget porttitor. Vestibulum mattis et mi eget luctus. In fermentum fringilla urna quis posuere. Morbi rutrum magna neque, vitae dapibus turpis semper eget. Fusce varius, dolor cursus auctor pretium, diam ipsum venenatis enim, at viverra nisi odio sed enim. Nam a neque lacus. Fusce fringilla nulla id vulputate sollicitudin. Donec mattis, massa ultrices fringilla molestie, ligula est dapibus odio, sed elementum leo erat quis nisl. Maecenas vulputate porta nibh, at feugiat mi convallis suscipit. Nunc venenatis tortor non viverra pharetra.</p>
+            <br>
+            <img src="images/samosa.jpg" alt="Image of Samosa">
+            <br>
+            <h1>Matar Paneer</h1>
+            <p>Etiam sed odio ut arcu fringilla suscipit eu at massa. Integer lobortis neque sagittis orci commodo rutrum. Donec facilisis, erat at tempor venenatis, orci felis tincidunt mauris, non ullamcorper nisi nibh sed justo. Suspendisse potenti. Praesent ipsum magna, bibendum sit amet sapien sollicitudin, suscipit fermentum arcu. Ut eu viverra ex. Nullam efficitur enim nec laoreet pretium. Integer commodo molestie tempor. Vivamus non lectus at mauris placerat pretium eu quis est. Nullam bibendum interdum ligula vel malesuada. Nullam at lorem pharetra magna blandit mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+            <br>
+            <img src="images/matarpaneer.jpg" alt="Image of Matar Paneer">
+            <br>
+            <h1>Masala Dosa</h1>
+            <p>Phasellus varius nisi nec risus tincidunt fringilla. Donec varius lectus vel ex aliquet, ut hendrerit dolor varius. Curabitur ultrices tortor nec volutpat tincidunt. Nam porttitor leo dolor, faucibus sodales erat porta non. Maecenas eu mollis ante. Praesent eu risus eu felis dignissim finibus. Phasellus dolor lacus, mattis vitae facilisis sit amet, lacinia sit amet quam. Curabitur ultrices consequat odio. Etiam fermentum malesuada odio, ac posuere massa commodo non. Maecenas finibus blandit lorem, sed congue nulla sollicitudin ac. Morbi volutpat justo maximus rhoncus mollis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In finibus eros sit amet magna tempor, sit amet malesuada est pharetra. Etiam venenatis augue est, sit amet cursus mauris iaculis id. Suspendisse scelerisque est orci, in fringilla ante bibendum nec. Pellentesque turpis nulla, imperdiet in elit a, pellentesque faucibus nulla.</p>
+            <br>
+            <img src="images/masaladosa.jpg" alt="Image of Masala Dosa">
+        </section>
+        <!-- Return to Top Button -->
+        <div><button onclick="topFunction()" id="cornerbtn" class="return-to-top" title="Go to top"><img src="images/back-to-top-icon-png-7.jpg" alt=""></button></div>
+        <!-- JavaScript - Return to Top -->
+        <script>
+            // When the user scrolls down 800px from the top of the document, show the button
+             window.onscroll = function() {scrollFunction()};
+             function scrollFunction() {
+               if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+                 document.getElementById("cornerbtn").style.display = "block";
+               } else {
+                 document.getElementById("cornerbtn").style.display = "none";
+               }
+             }
+             // When the user clicks on the button, scroll to the top of the document
+             function topFunction() {
+               document.body.scrollTop = 0;
+               document.documentElement.scrollTop = 0;
+             }
+         </script>
+        <footer>
+            <p>&copy; <span id="copyright"></span> Justin Lee Productions</p>
+        </footer>
+    </main>
+</body>
+</html>
+<!-- Javascript - Get Current Year for the Footer -->
+<script>
+    window.onload = function() {
+        var d = new Date();
+        document.getElementById("copyright").innerHTML = d.getFullYear();
+    }
+</script>
